@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    background-image: url(ursa-major-ursa-minor-constellations_23-2150028893.avif);
+}
+
+.all{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #0b1522; */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.button{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 99;
+    cursor: pointer;
+    
+}
+
+.heart::before{
+    transition: 1s;
+}
+
+.heart::after{
+    transition: 1s;
+}
+
+
+
+
+
+/* .button:hover{
+    cursor: pointer; 
+    width: 70px;
+    height: 70px;
+    border-radius: 0;
+    transition: 0.5s;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px red;
+    
+}
+
+.button:hover + .title{
+    opacity: 100;
+    transition: 1s;
+}*/
+
+.heart::before{
+    content:'' ;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px red;
+}
+
+.heart::after{
+    content:'' ;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    right:-50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px red;
+} 
+
+.title{
+    position: absolute;
+    transform: translateY(85px);
+    color: white;
+    opacity: 0;
+    /* transition: 0.8s; */
+    
+}
+
+
+
+

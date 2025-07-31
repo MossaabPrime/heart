@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="heart_icon-icons.com_54429.ico">
+    <title>AYA</title>
+</head>
+<body>
+
+    <div class="all">
+        <div class="button">
+            <a href="#"></a>
+        </div>
+        <div class="title">I LOVE YOU</div>
+        
+    </div>
+
+
+
+    <script>
+        let heart = document.querySelector('.button');
+        let text = document.querySelector('.title');
+
+        heart.addEventListener("click", function(){
+            heart.style.width = '70px';
+            heart.style.height = '70px';
+            heart.style.borderRadius = '0';
+            heart.style.rotate= '-45deg';
+            heart.style.boxShadow= '-10px 10px 90px red';
+            heart.style.transition='1s';
+
+            text.style.opacity= '100';
+            text.style.transition='1s';
+
+            heart.classList.add("heart");
+
+            setTimeout(function() {
+                heart.style.width = '';  // Reset to default (CSS-defined or browser default)
+                heart.style.height = '';
+                heart.style.borderRadius = '';
+                heart.style.rotate = '';
+                heart.style.boxShadow = '';
+                heart.style.transition = '1';
+
+                text.style.opacity = '';
+                text.style.transition = '0.5';
+
+                heart.classList.remove("heart"); // Remove the added class
+                }, 3000);
+        })
+    </script>
+    
+</body>
+</html>
